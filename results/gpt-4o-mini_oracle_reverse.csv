@@ -1,0 +1,369 @@
+,provider,model_name,eval_mode,temp,max_tokens,financebench_id,question,gold_answer,model_answer,retrieved_documents
+0,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_03029,What is the FY2018 capital expenditure amount (in USD millions) for 3M? Give a response to the question by relying on the details shown in the cash flow statement.,$1577.00,"The FY2018 capital expenditure amount for 3M, as indicated in the cash flow statement, is $1,577 million. This amount is listed under ""Purchases of property, plant and equipment (PP&E)"" in the Cash Flows from Investing Activities section.",[]
+1,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_04672,Assume that you are a public equities analyst. Answer the following question by primarily using information that is shown in the balance sheet: what is the year end FY2018 net PPNE for 3M? Answer in USD billions.,$8.70,"To calculate the net Property, Plant, and Equipment (PP&E) for 3M at the end of FY2018, we can refer to the balance sheet provided.
+
+The net PP&E is given directly in the balance sheet as follows:
+
+- Property, plant and equipment: $24,873 million
+- Less: Accumulated depreciation: $(16,135) million
+
+Net PP&E = Property, plant and equipment - Accumulated depreciation  
+Net PP&E = $24,873 million - $16,135 million  
+Net PP&E = $8,738 million
+
+To convert this amount into billions, we divide by 1,000:
+
+Net PP&E in billions = $8,738 million / 1,000 = $8.738 billion
+
+Therefore, the year-end FY2018 net PP&E for 3M is **$8.738 billion**.",[]
+2,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_00499,Is 3M a capital-intensive business based on FY2022 data?,"No, the company is managing its CAPEX and Fixed Assets pretty efficiently, which is evident from below key metrics:
+CAPEX/Revenue Ratio: 5.1%
+Fixed assets/Total Assets: 20%
+Return on Assets= 12.4%","To determine if 3M is a capital-intensive business based on FY2022 data, we can analyze a few key financial metrics from the provided consolidated financial statements.
+
+1. **Property, Plant, and Equipment (PP&E)**: In FY2022, 3M reported net property, plant, and equipment of $9,178 million. This indicates a significant investment in physical assets, which is a characteristic of capital-intensive businesses.
+
+2. **Capital Expenditures**: The cash flow statement shows that 3M spent $1,749 million on purchases of property, plant, and equipment in FY2022. This level of capital expenditure relative to net sales ($34,229 million) suggests that 3M is investing a considerable amount in maintaining and expanding its physical assets.
+
+3. **Depreciation and Amortization**: The depreciation and amortization expense for FY2022 was $1,831 million. High depreciation expenses can indicate a large base of capital assets, which is typical for capital-intensive industries.
+
+4. **Total Assets**: 3M's total assets were reported at $46,455 million, with a significant portion tied up in long-term assets like PP&E and intangible assets.
+
+5. **Industry Context**: 3M operates in various sectors, including manufacturing and healthcare, which are generally considered capital-intensive due to the need for substantial investments in equipment, facilities, and technology.
+
+Based on these observations, 3M can be classified as a capital-intensive business. The significant investments in property, plant, and equipment, along with high depreciation expenses and substantial capital expenditures, support this conclusion.",[]
+3,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_01226,"What drove operating margin change as of FY2022 for 3M? If operating margin is not a useful metric for a company like this, then please state that and explain why.","Operating Margin for 3M in FY2022 has decreased by 1.7% primarily due to: 
+-Decrease in gross Margin
+-mostly one-off charges including Combat Arms Earplugs litigation, impairment related to exiting PFAS manufacturing, costs related to exiting Russia and divestiture-related restructuring
+charges","The operating margin for 3M decreased from 20.8% in FY2021 to 19.1% in FY2022, reflecting a change of (1.7)%. Several factors contributed to this decline:
+
+1. **Increased Cost of Sales**: The cost of sales as a percentage of net sales increased from 53.2% to 56.2%. This rise was primarily driven by special item costs related to significant litigation, higher raw materials and logistics costs, and manufacturing productivity challenges. The shutdown of certain operations in Belgium and the costs associated with restarting previously-idled operations also contributed to the increase.
+
+2. **Higher Selling, General and Administrative Expenses (SG&A)**: SG&A expenses increased from 20.4% to 26.5% of net sales. This increase was influenced by special item costs for litigation, impairment costs related to exiting PFAS manufacturing, costs associated with exiting Russia, and restructuring charges related to divestitures. Although there were some offsetting benefits from restructuring and cost management, the overall increase in SG&A significantly impacted the operating margin.
+
+3. **Goodwill Impairment Expense**: The recognition of a goodwill impairment charge related to the commitment to exit PFAS manufacturing also negatively affected the operating margin.
+
+4. **Research and Development (R&D) Expenses**: Although R&D expenses decreased slightly as a percentage of sales, the overall increase in costs elsewhere overshadowed this reduction.
+
+In summary, the decline in operating margin for 3M in FY2022 was primarily driven by increased costs in sales and SG&A, along with the impact of goodwill impairment. 
+
+Regarding the usefulness of operating margin as a metric for a company like 3M, it can still be a relevant measure, but it should be interpreted with caution. Operating margin can provide insights into the efficiency of a company's core operations and its ability to manage costs relative to sales. However, for companies facing significant litigation costs, restructuring, and impairment charges—like 3M—operating margin may not fully reflect the underlying operational performance. In such cases, it may be beneficial to consider additional metrics, such as adjusted operating income or EBITDA, which can provide a clearer picture by excluding one-time charges and special items that can distort the operating margin.",[]
+4,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_01865,"If we exclude the impact of M&A, which segment has dragged down 3M's overall growth in 2022?",The consumer segment shrunk by 0.9% organically.,"If we exclude the impact of mergers and acquisitions (M&A), the segment that has dragged down 3M's overall growth in 2022 is the **Consumer** segment. This segment experienced a decline in organic sales of **(0.9%)** and a total sales change of **(3.9%)**, indicating a negative impact on overall growth. Additionally, the other segments, while also facing challenges, showed positive organic sales growth or less severe declines compared to the Consumer segment.",[]
+5,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_00807,"Does 3M have a reasonably healthy liquidity profile based on its quick ratio for Q2 of FY2023? If the quick ratio is not relevant to measure liquidity, please state that and explain why.","No. The quick ratio for 3M was 0.96 by Jun'23 close, which needs a bit of an improvement to touch the 1x mark","To assess 3M's liquidity profile using the quick ratio, we first need to calculate the quick ratio itself. The quick ratio is a measure of a company's ability to meet its short-term obligations with its most liquid assets. It is calculated using the formula:
+
+\[
+\text{Quick Ratio} = \frac{\text{Current Assets} - \text{Inventories} - \text{Prepaid Expenses}}{\text{Current Liabilities}}
+\]
+
+From the provided balance sheet data for June 30, 2023:
+
+- **Current Assets**: $15,754 million
+- **Inventories**: $5,280 million
+- **Prepaid Expenses**: $674 million
+- **Current Liabilities**: $10,936 million
+
+Now, we can plug these values into the quick ratio formula:
+
+1. Calculate liquid assets:
+   \[
+   \text{Liquid Assets} = \text{Current Assets} - \text{Inventories} - \text{Prepaid Expenses}
+   \]
+   \[
+   \text{Liquid Assets} = 15,754 - 5,280 - 674 = 9,800 \text{ million}
+   \]
+
+2. Calculate the quick ratio:
+   \[
+   \text{Quick Ratio} = \frac{9,800}{10,936} \approx 0.897
+   \]
+
+A quick ratio of approximately 0.897 indicates that 3M has less than one dollar in liquid assets for every dollar of current liabilities. Generally, a quick ratio below 1.0 suggests that a company may have difficulty meeting its short-term obligations without selling inventory or relying on other less liquid assets.
+
+In conclusion, based on the quick ratio of approximately 0.897, 3M does not have a reasonably healthy liquidity profile for Q2 of FY2023, as it indicates potential challenges in covering its current liabilities with its most liquid assets.",[]
+6,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_00941,Which debt securities are registered to trade on a national securities exchange under 3M's name as of Q2 of 2023?,"Following debt securities registered under 3M's name are listed to trade on the New York Stock Exchange:
+-1.500% Notes due 2026 (Trading Symbol: MMM26)
+-1.750% Notes due 2030 (Trading Symbol: MMM30)
+-1.500% Notes due 2031 (Trading Symbol: MMM31)","As of Q2 of 2023, the debt securities registered to trade on a national securities exchange under 3M's name are:
+
+1. 1.500% Notes due 2026 (Trading Symbol: MMM26)
+2. 1.750% Notes due 2030 (Trading Symbol: MMM30)
+3. 1.500% Notes due 2031 (Trading Symbol: MMM31)",[]
+7,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_01858,Does 3M maintain a stable trend of dividend distribution?,"Yes, not only they distribute the dividends on a routine basis, 3M has also been increasing the per share dividend for consecutive 65 years","Yes, 3M maintains a stable trend of dividend distribution. The company has increased its dividend for 65 consecutive years, demonstrating a consistent commitment to returning value to shareholders through regular dividend payments. In February 2023, 3M declared a first-quarter dividend of $1.50 per share, which was a 1 percent increase from the previous year, and this was followed by a second-quarter dividend of the same amount. This history of consecutive increases indicates a stable and reliable approach to dividend distribution.",[]
+8,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_02987,What is the FY2019 fixed asset turnover ratio for Activision Blizzard? Fixed asset turnover ratio is defined as: FY2019 revenue / (average PP&E between FY2018 and FY2019). Round your answer to two decimal places. Base your judgments on the information provided primarily in the statement of income and the statement of financial position.,24.26,"To calculate the fixed asset turnover ratio for Activision Blizzard for FY2019, we will use the formula:
+
+\[
+\text{Fixed Asset Turnover Ratio} = \frac{\text{FY2019 Revenue}}{\text{Average PP&E}}
+\]
+
+1. **Determine FY2019 Revenue**:
+   From the consolidated statements of operations, the total net revenues for FY2019 is:
+   \[
+   \text{FY2019 Revenue} = 6,489 \text{ million}
+   \]
+
+2. **Calculate Average Property, Plant, and Equipment (PP&E)**:
+   From the consolidated balance sheets, we have:
+   - PP&E at December 31, 2019 = 253 million
+   - PP&E at December 31, 2018 = 282 million
+
+   Now, calculate the average PP&E:
+   \[
+   \text{Average PP&E} = \frac{\text{PP&E}_{2019} + \text{PP&E}_{2018}}{2} = \frac{253 + 282}{2} = \frac{535}{2} = 267.5 \text{ million}
+   \]
+
+3. **Calculate the Fixed Asset Turnover Ratio**:
+   Now, plug the values into the formula:
+   \[
+   \text{Fixed Asset Turnover Ratio} = \frac{6,489}{267.5} \approx 24.24
+   \]
+
+4. **Round to Two Decimal Places**:
+   The fixed asset turnover ratio for Activision Blizzard for FY2019 is:
+   \[
+   \text{Fixed Asset Turnover Ratio} \approx 24.24
+   \]
+
+Thus, the FY2019 fixed asset turnover ratio for Activision Blizzard is **24.24**.",[]
+9,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_07966,What is the FY2017 - FY2019 3 year average of capex as a % of revenue for Activision Blizzard? Answer in units of percents and round to one decimal place. Calculate (or extract) the answer from the statement of income and the cash flow statement.,1.9%,"To calculate the FY2017 - FY2019 3-year average of capital expenditures (capex) as a percentage of revenue for Activision Blizzard, we need to extract the relevant figures from the provided financial statements.
+
+1. **Extract Net Revenues:**
+   - FY2019: $6,489 million
+   - FY2018: $7,500 million
+   - FY2017: $7,017 million
+
+   **Total Net Revenues for 3 years:**
+   \[
+   6,489 + 7,500 + 7,017 = 20,006 \text{ million}
+   \]
+
+2. **Extract Capital Expenditures (Capex):**
+   - FY2019: $(116) million
+   - FY2018: $(131) million
+   - FY2017: $(155) million
+
+   **Total Capex for 3 years:**
+   \[
+   -116 - 131 - 155 = -402 \text{ million}
+   \]
+
+3. **Calculate Capex as a Percentage of Revenue for Each Year:**
+   - FY2019: 
+   \[
+   \frac{-116}{6,489} \times 100 \approx -1.79\%
+   \]
+   - FY2018: 
+   \[
+   \frac{-131}{7,500} \times 100 \approx -1.75\%
+   \]
+   - FY2017: 
+   \[
+   \frac{-155}{7,017} \times 100 \approx -2.21\%
+   \]
+
+4. **Calculate the Average Capex as a Percentage of Revenue:**
+   \[
+   \text{Average} = \frac{-1.79 + (-1.75) + (-2.21)}{3} \approx \frac{-5.75}{3} \approx -1.9167\%
+   \]
+
+5. **Round to One Decimal Place:**
+   \[
+   \text{Average Capex as a % of Revenue} \approx -1.9\%
+   \]
+
+Thus, the FY2017 - FY2019 3-year average of capital expenditures as a percentage of revenue for Activision Blizzard is approximately **-1.9%**.",[]
+10,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_04735,You are an investment banker and your only resource(s) to answer the following question is (are): the statement of financial position and the cash flow statement. Here's the question: what is the FY2015 operating cash flow ratio for Adobe? Operating cash flow ratio is defined as: cash from operations / total current liabilities. Round your answer to two decimal places.,0.66,"To calculate the operating cash flow ratio for Adobe for FY2015, we will use the formula:
+
+\[
+\text{Operating Cash Flow Ratio} = \frac{\text{Cash from Operations}}{\text{Total Current Liabilities}}
+\]
+
+From the provided cash flow statement, the cash from operations for FY2015 is:
+
+\[
+\text{Cash from Operations} = 1,469,502 \text{ (in thousands)}
+\]
+
+From the consolidated balance sheet, the total current liabilities for FY2015 is:
+
+\[
+\text{Total Current Liabilities} = 2,213,556 \text{ (in thousands)}
+\]
+
+Now, we can plug these values into the formula:
+
+\[
+\text{Operating Cash Flow Ratio} = \frac{1,469,502}{2,213,556}
+\]
+
+Calculating this gives:
+
+\[
+\text{Operating Cash Flow Ratio} \approx 0.663
+\]
+
+Rounding to two decimal places:
+
+\[
+\text{Operating Cash Flow Ratio} \approx 0.66
+\]
+
+Thus, the FY2015 operating cash flow ratio for Adobe is **0.66**.",[]
+11,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_07507,What is Adobe's year-over-year change in unadjusted operating income from FY2015 to FY2016 (in units of percents and round to one decimal place)? Give a solution to the question by using the income statement.,65.4%,"To calculate Adobe's year-over-year change in unadjusted operating income from FY2015 to FY2016, we first need to identify the operating income for both years from the provided income statement.
+
+From the income statement:
+- Operating income for FY2016 (December 2, 2016): **$1,493,602**
+- Operating income for FY2015 (November 27, 2015): **$903,095**
+
+Next, we calculate the change in operating income:
+
+\[
+\text{Change in Operating Income} = \text{Operating Income}_{2016} - \text{Operating Income}_{2015}
+\]
+\[
+\text{Change in Operating Income} = 1,493,602 - 903,095 = 590,507
+\]
+
+Now, we calculate the year-over-year change in percentage:
+
+\[
+\text{Percentage Change} = \left( \frac{\text{Change in Operating Income}}{\text{Operating Income}_{2015}} \right) \times 100
+\]
+\[
+\text{Percentage Change} = \left( \frac{590,507}{903,095} \right) \times 100 \approx 65.4\%
+\]
+
+Thus, Adobe's year-over-year change in unadjusted operating income from FY2015 to FY2016 is approximately **65.4%**.",[]
+12,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_03856,What is the FY2017 operating cash flow ratio for Adobe? Operating cash flow ratio is defined as: cash from operations / total current liabilities. Round your answer to two decimal places. Please utilize information provided primarily within the balance sheet and the cash flow statement.,0.83,"To calculate the operating cash flow ratio for Adobe for FY2017, we will use the formula:
+
+\[
+\text{Operating Cash Flow Ratio} = \frac{\text{Cash from Operations}}{\text{Total Current Liabilities}}
+\]
+
+From the provided information:
+
+1. **Cash from Operations (Net cash provided by operating activities)** for FY2017 is:
+   \[
+   2,912,853 \text{ (in thousands)}
+   \]
+
+2. **Total Current Liabilities** for FY2017 is:
+   \[
+   3,527,457 \text{ (in thousands)}
+   \]
+
+Now, we can plug these values into the formula:
+
+\[
+\text{Operating Cash Flow Ratio} = \frac{2,912,853}{3,527,457}
+\]
+
+Calculating this gives:
+
+\[
+\text{Operating Cash Flow Ratio} \approx 0.826
+\]
+
+Rounding to two decimal places:
+
+\[
+\text{Operating Cash Flow Ratio} \approx 0.83
+\]
+
+Thus, the FY2017 operating cash flow ratio for Adobe is **0.83**.",[]
+13,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_00438,"Does Adobe have an improving operating margin profile as of FY2022? If operating margin is not a useful metric for a company like this, then state that and explain why.",No the operating margins of Adobe have recently declined from 36.8% in FY 2021 to 34.6% in FY2022. A drop by 2.2% in a year.,"To determine whether Adobe has an improving operating margin profile as of FY2022, we can calculate the operating margin for the years provided and analyze the trend.
+
+Operating margin is calculated as:
+
+\[
+\text{Operating Margin} = \frac{\text{Operating Income}}{\text{Total Revenue}} \times 100
+\]
+
+Using the data from the consolidated statements of income:
+
+1. **For FY2020:**
+   - Operating Income: $4,237 million
+   - Total Revenue: $12,868 million
+   - Operating Margin: \(\frac{4,237}{12,868} \times 100 \approx 32.9\%\)
+
+2. **For FY2021:**
+   - Operating Income: $5,802 million
+   - Total Revenue: $15,785 million
+   - Operating Margin: \(\frac{5,802}{15,785} \times 100 \approx 36.8\%\)
+
+3. **For FY2022:**
+   - Operating Income: $6,098 million
+   - Total Revenue: $17,606 million
+   - Operating Margin: \(\frac{6,098}{17,606} \times 100 \approx 34.6\%\)
+
+Now, let's summarize the operating margins:
+
+- FY2020: 32.9%
+- FY2021: 36.8%
+- FY2022: 34.6%
+
+From this data, we can see that Adobe's operating margin improved from FY2020 to FY2021, increasing from 32.9% to 36.8%. However, in FY2022, the operating margin decreased to 34.6%. 
+
+### Conclusion:
+Adobe does not have a consistently improving operating margin profile as of FY2022. While there was an improvement from FY2020 to FY2021, the margin declined in FY2022. 
+
+### Consideration of Operating Margin as a Metric:
+Operating margin can be a useful metric for evaluating a company's profitability and operational efficiency. However, for a company like Adobe, which relies heavily on subscription-based revenue, the operating margin may not fully capture the long-term value creation potential. Subscription businesses often have significant upfront costs related to customer acquisition and ongoing investments in product development and marketing. Therefore, while operating margin provides insight into current profitability, it may not reflect the company's future growth potential or the sustainability of its business model. In such cases, metrics like customer lifetime value (CLV), churn rate",[]
+14,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_00591,Does Adobe have an improving Free cashflow conversion as of FY2022?,"Yes, the FCF conversion (using net income as the denominator) for Adobe has improved by ~13% from 143% in 2021 to 156% in 2022","To determine if Adobe has an improving Free Cash Flow (FCF) conversion as of FY2022, we first need to calculate the Free Cash Flow for the years provided and then analyze the trend.
+
+Free Cash Flow is typically calculated as:
+
+\[ \text{Free Cash Flow} = \text{Net Cash Provided by Operating Activities} - \text{Capital Expenditures} \]
+
+From the provided data:
+
+1. **Net Cash Provided by Operating Activities**:
+   - FY2022: $7,838 million
+   - FY2021: $7,230 million
+   - FY2020: $5,727 million
+
+2. **Capital Expenditures (Purchases of Property and Equipment)**:
+   - FY2022: $442 million
+   - FY2021: $348 million
+   - FY2020: $419 million
+
+Now, we can calculate the Free Cash Flow for each year:
+
+- **FY2022**:
+  \[
+  \text{FCF} = 7,838 - 442 = 7,396 \text{ million}
+  \]
+
+- **FY2021**:
+  \[
+  \text{FCF} = 7,230 - 348 = 6,882 \text{ million}
+  \]
+
+- **FY2020**:
+  \[
+  \text{FCF} = 5,727 - 419 = 5,308 \text{ million}
+  \]
+
+Now, let's summarize the Free Cash Flow for each year:
+
+- FY2022: $7,396 million
+- FY2021: $6,882 million
+- FY2020: $5,308 million
+
+### Analysis of Free Cash Flow Conversion
+
+To assess the improvement in Free Cash Flow conversion, we can look at the growth in Free Cash Flow over the years:
+
+- From FY2020 to FY2021: 
+  \[
+  \text{Growth} = \frac{6,882 - 5,308}{5,308} \times 100 \approx 29.6\%
+  \]
+
+- From FY2021 to FY2022: 
+  \[
+  \text{Growth} = \frac{7,396 - 6,882}{6,882} \times 100 \approx 7.5\%
+  \]
+
+### Conclusion
+
+Adobe's Free Cash Flow has increased from FY2020 to FY2022, indicating an improving trend. The growth rate from",[]
+15,openai,gpt-4o-mini,oracle_reverse,0.01,512,financebench_id_01319,What is the quantity of restructuring costs directly outlined in AES Corporation's income statements for FY2022? If restructuring costs are not explicitly outlined then state 0.,0,"The income statement for AES Corporation for FY2022 does not explicitly outline any restructuring costs. Therefore, the quantity of restructuring costs directly outlined is 0.",[]

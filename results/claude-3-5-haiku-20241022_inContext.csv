@@ -1,0 +1,143 @@
+,provider,model_name,eval_mode,temp,max_tokens,financebench_id,question,gold_answer,model_answer,retrieved_documents
+0,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_03029,What is the FY2018 capital expenditure amount (in USD millions) for 3M? Give a response to the question by relying on the details shown in the cash flow statement.,$1577.00,"Based on the Consolidated Statement of Cash Flows in the filing, the capital expenditure amount for 3M in fiscal year 2018 is $1,674 million. This can be found in the cash flow statement under the line item ""Capital expenditures"".",[]
+1,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_04672,Assume that you are a public equities analyst. Answer the following question by primarily using information that is shown in the balance sheet: what is the year end FY2018 net PPNE for 3M? Answer in USD billions.,$8.70,"Based on the balance sheet in the filing, the net Property, Plant, and Equipment (PPNE) for 3M at the end of fiscal year 2018 is $9.4 billion.
+
+To arrive at this figure, I looked at the Consolidated Balance Sheet on page 58, which shows the gross Property, Plant, and Equipment and the accumulated depreciation. The net PPNE can be calculated by subtracting the accumulated depreciation from the gross Property, Plant, and Equipment.",[]
+2,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_00499,Is 3M a capital-intensive business based on FY2022 data?,"No, the company is managing its CAPEX and Fixed Assets pretty efficiently, which is evident from below key metrics:
+CAPEX/Revenue Ratio: 5.1%
+Fixed assets/Total Assets: 20%
+Return on Assets= 12.4%","To determine if 3M is a capital-intensive business, I'll look at its capital expenditures relative to its revenue and total assets in FY2022.
+
+From the filing, I found these key details:
+- In 2022, 3M spent approximately $317 million on capital projects for environmental purposes
+- Capital expenditures for environmental projects are expected to be around $646 million for 2023 and 2024 combined
+
+However, to fully assess capital intensity, I would need to see total capital expenditures and compare them to revenue or total assets. Unfortunately, the specific total capital expenditure figure is not provided in this excerpt.
+
+Without the complete capital expenditure data, I cannot definitively conclude whether 3M is a capital-intensive business based solely on this filing. More financial information would be needed to make a precise determination.
+
+The filing does indicate 3M has significant manufacturing operations across multiple business segments and invests in environmental capital projects, which suggests some level of capital intensity. But I cannot quantitatively confirm the degree of capital intensity without additional financial details.",[]
+3,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_01226,"What drove operating margin change as of FY2022 for 3M? If operating margin is not a useful metric for a company like this, then please state that and explain why.","Operating Margin for 3M in FY2022 has decreased by 1.7% primarily due to: 
+-Decrease in gross Margin
+-mostly one-off charges including Combat Arms Earplugs litigation, impairment related to exiting PFAS manufacturing, costs related to exiting Russia and divestiture-related restructuring
+charges","Based on the filing, I cannot find a specific detailed explanation of what drove operating margin change for 3M in FY2022. The document does not provide a direct analysis of operating margin drivers.
+
+However, the filing does mention some factors that likely impacted margins in 2022, including:
+
+1. Raw material price inflation: The document notes that ""3M experienced net raw material price inflation in 2022""
+
+2. Supply chain disruptions: The filing mentions ""many geopolitical, logistics, and disruptive events caused imbalance in the global supply chain""
+
+3. Productivity projects: The company mentions deploying ""productivity projects to minimize the impact"" of supply chain and raw material challenges
+
+While these factors suggest potential margin pressures, the filing does not explicitly quantify their impact on operating margin.
+
+If you need a precise breakdown of operating margin changes, I would recommend looking for additional financial documents like the quarterly earnings report or investor presentations that might provide more granular margin analysis.",[]
+4,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_01865,"If we exclude the impact of M&A, which segment has dragged down 3M's overall growth in 2022?",The consumer segment shrunk by 0.9% organically.,"Based on the filing, I cannot find a specific statement directly answering which segment dragged down 3M's overall growth in 2022 when excluding M&A impact. The filing provides detailed information about 3M's business segments, but does not explicitly state which segment underperformed in 2022. To definitively answer this question, I would need additional financial information or management commentary not present in this document.",[]
+5,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_00807,"Does 3M have a reasonably healthy liquidity profile based on its quick ratio for Q2 of FY2023? If the quick ratio is not relevant to measure liquidity, please state that and explain why.","No. The quick ratio for 3M was 0.96 by Jun'23 close, which needs a bit of an improvement to touch the 1x mark","Based on the provided 10-Q filing, I cannot definitively assess 3M's liquidity profile using the quick ratio, as the quick ratio is not directly calculated or presented in the document.
+
+The quick ratio (current assets excluding inventory, divided by current liabilities) would typically be used to measure a company's short-term liquidity. However, to calculate this, I would need to extract the relevant balance sheet figures.
+
+From the Consolidated Balance Sheet, I can see the following relevant current asset and liability figures as of June 30, 2023:
+- Current Assets (excluding inventory): $10,474 million
+  (Cash and cash equivalents: $4,258M, Marketable securities: $56M, Accounts receivable: $4,947M, Prepaids: $674M, Other current assets: $539M)
+- Current Liabilities: $10,936 million
+
+A quick ratio calculation would be: $10,474M / $10,936M = 0.96
+
+While this is close to 1.0, which suggests relatively balanced short-term assets and liabilities, I recommend consulting a financial advisor for a comprehensive liquidity assessment, as the quick ratio is just one of many metrics to evaluate a company's financial health.",[]
+6,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_00941,Which debt securities are registered to trade on a national securities exchange under 3M's name as of Q2 of 2023?,"Following debt securities registered under 3M's name are listed to trade on the New York Stock Exchange:
+-1.500% Notes due 2026 (Trading Symbol: MMM26)
+-1.750% Notes due 2030 (Trading Symbol: MMM30)
+-1.500% Notes due 2031 (Trading Symbol: MMM31)","Based on the filing, the debt securities registered to trade on a national securities exchange under 3M's name as of Q2 of 2023 are:
+
+1. 1.500% Notes due 2026 (trading symbol: MMM26)
+2. 1.750% Notes due 2030 (trading symbol: MMM30)
+3. 1.500% Notes due 2031 (trading symbol: MMM31)
+
+These notes are registered to trade on the New York Stock Exchange.",[]
+7,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_01858,Does 3M maintain a stable trend of dividend distribution?,"Yes, not only they distribute the dividends on a routine basis, 3M has also been increasing the per share dividend for consecutive 65 years","Based on the filing, I can provide insights about 3M's dividend distribution:
+
+While the filing does not explicitly discuss the stability of 3M's dividend trend, the Consolidated Statement of Cash Flows provides some relevant information about dividend payments:
+
+1. Dividends paid to shareholders:
+- For the six months ended June 30, 2023: $1,655 million
+- For the six months ended June 30, 2022: $1,700 million
+
+The dividend payments are very close in amount between these two periods, suggesting a relatively stable dividend distribution approach. The slight decrease from 2022 to 2023 is minimal (about 2.6% reduction).
+
+However, to definitively confirm a stable dividend trend, I would recommend reviewing additional historical financial reports beyond this single quarterly filing. This document provides a snapshot of dividend payments for a limited time period.
+
+The filing indicates 3M continues to pay dividends consistently, even during a period of financial challenges (the company reported net losses in the first half of 2023), which suggests a commitment to maintaining dividend distributions.
+
+For a comprehensive assessment of dividend stability, I recommend examining multiple years of financial statements and the company's explicit dividend policy.",[]
+8,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_02987,What is the FY2019 fixed asset turnover ratio for Activision Blizzard? Fixed asset turnover ratio is defined as: FY2019 revenue / (average PP&E between FY2018 and FY2019). Round your answer to two decimal places. Base your judgments on the information provided primarily in the statement of income and the statement of financial position.,24.26,"To calculate the FY2019 fixed asset turnover ratio, I'll need to find the FY2019 revenue and the average Property, Plant & Equipment (PP&E) between FY2018 and FY2019.
+
+From the financial statements (which are not fully included in this excerpt), I would need to look up:
+1. FY2019 Revenue
+2. FY2018 PP&E
+3. FY2019 PP&E
+
+Unfortunately, the specific numerical values for these items are not provided in this filing excerpt. Without those specific numbers, I cannot calculate the exact fixed asset turnover ratio.
+
+The calculation would be:
+Fixed Asset Turnover Ratio = FY2019 Revenue / Average PP&E
+
+Where Average PP&E = (FY2018 PP&E + FY2019 PP&E) / 2
+
+I apologize, but I cannot complete the calculation with the information provided in this document.",[]
+9,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_07966,What is the FY2017 - FY2019 3 year average of capex as a % of revenue for Activision Blizzard? Answer in units of percents and round to one decimal place. Calculate (or extract) the answer from the statement of income and the cash flow statement.,1.9%,"To calculate the 3-year average of capex as a % of revenue, I'll need to find the capital expenditures (capex) and total revenue for each fiscal year from the financial statements. However, the provided filing does not include the full financial statements with these specific numbers.
+
+Without the complete financial statements, I cannot definitively calculate the exact capex as a % of revenue for each year and then compute the 3-year average.
+
+To accurately answer this question, I would need access to:
+1. The income statement showing total revenue
+2. The cash flow statement showing capital expenditures (capex)
+
+I apologize, but I cannot provide the precise calculation based on the information in this filing excerpt.",[]
+10,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_04735,You are an investment banker and your only resource(s) to answer the following question is (are): the statement of financial position and the cash flow statement. Here's the question: what is the FY2015 operating cash flow ratio for Adobe? Operating cash flow ratio is defined as: cash from operations / total current liabilities. Round your answer to two decimal places.,0.66,"To calculate the operating cash flow ratio for Adobe in FY2015, I'll need to find two values from the financial statements:
+
+1. Cash from operations
+2. Total current liabilities
+
+Unfortunately, the provided filing does not include the complete financial statements with these specific line items. Without the full statement of financial position and cash flow statement, I cannot definitively calculate the operating cash flow ratio.
+
+To accurately answer this question, I would need to see the complete financial statements showing the exact values for cash from operations and total current liabilities for the fiscal year ending November 27, 2015.",[]
+11,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_07507,What is Adobe's year-over-year change in unadjusted operating income from FY2015 to FY2016 (in units of percents and round to one decimal place)? Give a solution to the question by using the income statement.,65.4%,"To calculate Adobe's year-over-year change in unadjusted operating income from FY2015 to FY2016, I'll need to find the operating income values for those two fiscal years from the income statement.
+
+However, after carefully reviewing the provided document, I cannot locate the specific operating income figures needed to calculate this percentage change. The document appears to be a Form 10-K that provides a business overview, but does not include the detailed financial statements with income statement line items.
+
+Without the actual operating income numbers, I cannot compute the year-over-year percentage change. To answer this question definitively, I would need to see the complete income statement from the financial statements section of the filing.",[]
+12,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_03856,What is the FY2017 operating cash flow ratio for Adobe? Operating cash flow ratio is defined as: cash from operations / total current liabilities. Round your answer to two decimal places. Please utilize information provided primarily within the balance sheet and the cash flow statement.,0.83,"To calculate the FY2017 operating cash flow ratio for Adobe, I'll need to find the cash from operations and total current liabilities from the financial statements.
+
+Unfortunately, the specific financial statements with the exact numbers are not included in this filing excerpt. Without the precise balance sheet and cash flow statement numbers, I cannot definitively calculate the operating cash flow ratio.
+
+To properly calculate this ratio, I would need:
+1. Cash from Operations (from Cash Flow Statement)
+2. Total Current Liabilities (from Balance Sheet)
+
+The formula is: Operating Cash Flow Ratio = Cash from Operations / Total Current Liabilities
+
+I apologize that I cannot provide the exact numerical answer based on the information in this document. To get the precise ratio, I would need to reference the complete financial statements section of the annual report.",[]
+13,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_00438,"Does Adobe have an improving operating margin profile as of FY2022? If operating margin is not a useful metric for a company like this, then state that and explain why.",No the operating margins of Adobe have recently declined from 36.8% in FY 2021 to 34.6% in FY2022. A drop by 2.2% in a year.,"Based on the filing, I cannot definitively determine Adobe's operating margin profile for FY2022 as the document does not provide specific operating margin figures. 
+
+However, the filing suggests that operating margin might not be the most useful metric for analyzing Adobe's business for a few reasons:
+
+1. Adobe has a strong subscription-based business model across its Digital Media and Digital Experience segments, which focuses more on recurring revenue growth and customer expansion rather than traditional margin metrics.
+
+2. The company emphasizes strategic growth, product-led growth, and expanding customer base across different segments like Creative Cloud and Experience Cloud.
+
+3. Adobe is investing heavily in innovation, AI capabilities (Adobe Sensei), and expanding product capabilities across platforms, which may temporarily impact margins but are part of a long-term growth strategy.
+
+4. The company uses a data-driven operating model and focuses on optimizing customer engagement, conversion, and recurring revenue streams.
+
+For a comprehensive understanding of Adobe's financial performance, investors would likely want to look at metrics like:
+- Recurring revenue growth
+- Subscription customer base expansion
+- Product adoption rates
+- Revenue per user
+- Customer retention and expansion
+
+While operating margin could provide some insights, it may not capture the full value of Adobe's strategic approach to its business model.",[]
+14,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_00591,Does Adobe have an improving Free cashflow conversion as of FY2022?,"Yes, the FCF conversion (using net income as the denominator) for Adobe has improved by ~13% from 143% in 2021 to 156% in 2022","Based on the filing, I cannot find a direct statement about Adobe's Free Cash Flow Conversion trend for FY2022. The document is a Form 10-K that provides an overview of Adobe's business, strategy, and market opportunities, but does not include specific financial metrics about free cash flow conversion. To definitively answer this question, I would need to review Adobe's financial statements or cash flow statements, which are not fully included in this excerpt.",[]
+15,anthropic,claude-3-5-haiku-20241022,inContext,0.01,512,financebench_id_01319,What is the quantity of restructuring costs directly outlined in AES Corporation's income statements for FY2022? If restructuring costs are not explicitly outlined then state 0.,0,"After carefully reviewing the entire document, I can confirm that there is no explicit mention of a specific quantity of restructuring costs in AES Corporation's income statements for FY2022. Therefore, the answer is 0.",[]
