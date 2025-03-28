@@ -1,3 +1,4 @@
 .env
+.md
 venv/
-financebench/vectorstores/
+vectorstores/
