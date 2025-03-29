@@ -1,76 +1,67 @@
-# FinanceBench: A New Benchmark for Financial Question Answering
+# FinanceBench Comparative Evaluation
 
-<p align="center">
-    <img src="fig1.png" alt="drawing" style="width: 400px; display: block; margin: 0 auto; text-align:center;"/>
-</p>
+## Overview
 
-**Abstract:** 
-FinanceBench is a first-of-its-kind test suite for evaluating the performance of LLMs on open book financial question answering (QA). This repository contains an open source sample of 150 annotated examples used in the evaluation and analysis of models assessed in the FinanceBench paper. FinanceBench comprises 10,231 questions about publicly traded companies, with corresponding answers and evidence strings. The questions in FinanceBench are ecologically valid and cover a diverse set of scenarios. They are intended to be clear-cut and straightforward to answer to serve as a minimum performance standard. We test 16 state of the art model configurations (including GPT-4-Turbo, Llama2 and Claude2, with vector stores and long context prompts) on a sample of 150 cases from FinanceBench, and manually review their answers (n=2,400). The cases are available open-source. We show that existing LLMs have clear limitations for financial QA. Notably, GPT-4-Turbo used with a retrieval system incorrectly answered or refused to answer 81\% of questions. While augmentation techniques such as using longer context window to feed in relevant evidence improve performance, they are unrealistic for enterprise settings due to increased latency and cannot support larger financial documents. We find that all models examined exhibit weaknesses, such as hallucinations, that limit their suitability for use by enterprises.
+This project evaluates and compares the financial question-answering capabilities of Anthropic's Claude 3.5 Haiku and OpenAI's GPT-4o mini using the FinanceBench dataset
 
-[![arXiv](https://img.shields.io/badge/arXiv-2311.11944-<COLOR>.svg)](https://arxiv.org/abs/2311.11944)
+## Experiment Setting
+### Models
+- **Anthropic Claude 3.5 Haiku**
+- **OpenAI GPT-4o mini**
 
-**Contact:**
-To evaluate your models on the full `FinanceBench` dataset, or if you have questions about this work, you can email us at contact@patronus.ai
+### Configurations
+- **Temperature**: 0.01
+- **Max Tokens**: 512
+- **Embedding used in vector store**: OpenAI embeddings
+- **Context cutoff for *Long Context* evaluation mode**: 8192
 
----
+### Evaluation Setup
+- **Number of Questions**: Reduced from 150 to 16
+- **Number of Distinct PDFs**: Reduced from 84 to 9
 
-**Dataset Overview:**
-The provided open-source dataset (n=150) consists of two JSONL files (located in `/data/`):
+### Environment
+   - **Python Version**: 3.9
+   - **Required Libraries**: Listed in requirements.txt
 
+## Observation
 
-**`financebench_open_source.jsonl`**:
-```text
-    - financebench_id (int):            Unique identifier of the question
-    - question (str):                   Question of interest
-    - answer (str):                     Human-annotated gold answer
-    - dataset_subset_label (str):       Label to identify in which data subset the question is present ("OPEN_SOURCE" or "CLOSED_SOURCE")
-    - evidence (list[dict])             List of EvidenceDict's. 
-    - justification (str)               Human-Annotated justification of the gold answer
-    - question_type (str)               Type of Question: 'metrics-generated', 'domain-relevant', 'novel-generated' 
-    - question_reasoning (str)          Reasoning Type needed to solve the question
-    - domain_question_num (str)         ID of domain-relevant questions (`dg01` to `dg25`), "None" for 'metrics-generated' and 'novel-generated' questions
-    - company (str)                     Company of Interest
-    - doc_name (str)                    Unique Document Identifier. Format: {COMPANY}_{PERIOD}_{TYPE}. Some exceptions have the format {COMPANY}_{PERIOD}_{TYPE}_dated-{DATE}
+### Inference Time Comparison:
+|Configuration | GPT-4o mini | Claude 3.5 Haiku |
+|----------|------------|-----------------|
+| Closed Book | 59.1s | 48.4s |
+| Single Store | 38.3s | 1m5.6s |
+| Shared Store | 34.8s | 1m9.4s |
+| Long Context (Context-First) | 1m50.8s | 2m4.3s |
+| Long Context (Context-Last) | 1m29.8s | 2m4.8s |
+| Oracle (Context-First) | 1m15.4s | 1m3.0s |
+| Oracle (Context-Last) | 1m16.2s | 1m2.5s |
 
+### Model Performance:
+Model | Configuration | Correct Answer | Incorrect Answer | Failed to answer
+---------- |----------|-----------|----------|------------|
+GPT-4o mini | Closed Book | 1 | 3 | 11
+GPT-4o mini | Single Store | 3 | 2 | 10
+GPT-4o mini | Shared Store | 2 | 4 | 9
+GPT-4o mini | Long Context (Context-First) | 3 | 4 | 8
+GPT-4o mini | Long Context (Context-Last) | 4 | 4 | 7
+GPT-4o mini | Oracle (Context-First) | 9 | 4 | 2
+GPT-4o mini | Oracle (Context-Last) | 9 | 4 | 2
+Claude 3.5 Haiku | Closed Book | 1 | 2 | 12
+Claude 3.5 Haiku | Single Store | 3 | 2 | 10
+Claude 3.5 Haiku | Shared Store | 3 | 2 | 10
+Claude 3.5 Haiku | Long Context (Context-First) | 4 | 1 | 10
+Claude 3.5 Haiku | Long Context (Context-Last) | 3 | 3 | 9
+Claude 3.5 Haiku | Oracle (Context-First) | 12 | 2 | 1
+Claude 3.5 Haiku | Oracle (Context-Last) | 11 | 3 | 1
 
-    Each EvidenceDict contains four fields: 
-        - "evidence_text" (str):            Extracted evidence text from annotators (sentence, paragraph or page) 
-        - "evidence_doc_name" (str):        Unique Document Identifier of the relevant document containing the evidence
-        - "evidence_page_num" (int):        Page number of the evidence text (ZERO-indexed)
-        - "evidence_text_full_page" (str):  Full page extract containing the evidence text
- ```
-
-**`financebench_document_information.jsonl`**:
-```text
-    - doc_name (str)            Unique Document Identifier. Format: {COMPANY}_{PERIOD}_{TYPE}
-    - doc_type (str)            Type of the Document: {"10K", "10Q", "8K", "EARNINGS", "10K_ANNUAL"}
-    - doc_period (int)          Period of the relevant financial document
-    - doc_link (str)            URL of the relevant document
-    - company (str)             Company 
-    - comany_sector_gics (str)  Company Sector in terms of GICS standard
-```
-
-The above two files can be loaded and joined using:
-```python
-df_questions = pd.read_json("data/financebench_open_source.jsonl", lines=True)
-df_meta = pd.read_json("data/financebench_document_information.jsonl", lines=True)
-df_full = pd.merge(df_questions, df_meta, on="doc_name")
-```
-
-The relevant financial source documents (PDFS) are located in `/pdfs/`
-
-In addition, we provide the human-annotated model completions of the evaluated model configurations in the paper of the open-source dataset in `/results/`
+### Challenges Faced:
+- **API Limitations**: Both models had limitations with their free-tier usage, resulting in reduced question count and context size. Initially, I attempted to complete the experiment using the free tier, but discovered that with a $0 balance, API calls were not possible.  Eventually, I subscribed to the minimum plan ($5 each for OpenAI and Anthropic), which ultimately cost $0.5 to complete the experiment.
+- **Missing Anthropic Tokenizer**: The Anthropic library does not provide a get_tokenizer function, so I skipped the "check Anthropic tokenizer" step. This may have impacted the experiments in the long-context evaluation mode.
+- **Answer Verification Challenges**: LLM responses were lengthy, making it difficult to quickly determine if they matched the gold-standard answer. Manual verification required significant effort. Additionally, one of the 16 questions had a gold-standard answer that was too specialized for me to judge the AI’s response accurately, so I ultimately ignored that question. As a result, the final model performance was evaluated on 15 questions.
 
 ---
 
-**Citation:** If you use our open-source dataset or refer to our result, please use the following citation:
-```latex
-@misc{islam2023financebench,
-      title={FinanceBench: A New Benchmark for Financial Question Answering}, 
-      author={Pranab Islam and Anand Kannappan and Douwe Kiela and Rebecca Qian and Nino Scherrer and Bertie Vidgen},
-      year={2023},
-      eprint={2311.11944},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-```
+## References
+
+- https://github.com/patronus-ai/financebench
+- https://arxiv.org/pdf/2311.11944
