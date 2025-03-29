@@ -21,7 +21,7 @@ This project evaluates and compares the financial question-answering capabilitie
 
 ### Environment
    - **Python Version**: 3.9
-   - **Required Libraries**: Listed in requirements.txt
+   - **Required Libraries**: Listed in `requirements.txt`
 
 ## Observation
 
@@ -35,6 +35,12 @@ This project evaluates and compares the financial question-answering capabilitie
 | Long Context (Context-Last) | 1m29.8s | 2m4.8s |
 | Oracle (Context-First) | 1m15.4s | 1m3.0s |
 | Oracle (Context-Last) | 1m16.2s | 1m2.5s |
+
+The inference time for various configurations is ranked as follows:
+
+- **Long Context** > **Oracle** > **Vector Store** / **Closed Book**
+
+Notably, **Claude 3.5 Haiku** requires significantly more time than **GPT-4o mini** for the vector store configurations. For other configurations, there is no consistent, significant difference between the models.
 
 ### Model Performance:
 Model | Configuration | Correct Answer | Incorrect Answer | Failed to answer
@@ -54,9 +60,19 @@ Claude 3.5 Haiku | Long Context (Context-Last) | 3 | 3 | 9
 Claude 3.5 Haiku | Oracle (Context-First) | 12 | 2 | 1
 Claude 3.5 Haiku | Oracle (Context-Last) | 11 | 3 | 1
 
+The model performance follows this ranking:
+
+- **Oracle** > **Long Context** ≥ **Vector Store** > **Closed Book**
+
+When comparing the models:
+
+- Under the **Oracle** configuration, **Claude 3.5 Haiku** outperforms **GPT-4o mini**. For all other configurations, there are no significant differences between the models.
+
+## Other
+
 ### Challenges Faced:
 - **API Limitations**: Both models had limitations with their free-tier usage, resulting in reduced question count and context size. Initially, I attempted to complete the experiment using the free tier, but discovered that with a $0 balance, API calls were not possible.  Eventually, I subscribed to the minimum plan ($5 each for OpenAI and Anthropic), which ultimately cost $0.5 to complete the experiment.
-- **Missing Anthropic Tokenizer**: The Anthropic library does not provide a get_tokenizer function, so I skipped the "check Anthropic tokenizer" step. This may have impacted the experiments in the long-context evaluation mode.
+- **Missing Anthropic Tokenizer**: The Anthropic library does not provide a `get_tokenizer` function, so I skipped the "check Anthropic tokenizer" step. This may have impacted the experiments in the long-context evaluation mode.
 - **Answer Verification Challenges**: LLM responses were lengthy, making it difficult to quickly determine if they matched the gold-standard answer. Manual verification required significant effort. Additionally, one of the 16 questions had a gold-standard answer that was too specialized for me to judge the AI’s response accurately, so I ultimately ignored that question. As a result, the final model performance was evaluated on 15 questions.
 
 ---
